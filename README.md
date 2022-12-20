@@ -31,7 +31,7 @@ Observe RDP Traffic
 <p>
 Resource Groups (similar to a file system) logical collections of virtual machines, storage accounts, virtual networks, web apps, databases, and/or database servers.  
   
-Virtual Machines allow you to more easily scale your apps by adding more physical or virtual servers to distribute the workload across multiple VMs. We created two Virtual Machines (pictured below) of differing Operating Systems (Windows 10 21H2 & Ubuntu Server 20.04) that will be used for Remote Deskop and to observe network traffic between the two devices. 
+Virtual Machines allow you to more easily scale your applications by adding more physical or virtual servers to distribute the workload across multiple VMs. We created two Virtual Machines (pictured below) of differing Operating Systems (Windows 10 21H2 & Ubuntu Server 20.04) that will be used for Remote Deskop and to observe network traffic between the two devices. 
 </p>
 
 <p>
