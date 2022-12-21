@@ -58,6 +58,10 @@ After retrieving the private IP address from VM2 (Linux Ubutu Server 20.04) we c
   </p>
   <img src="https://i.imgur.com/mTtkBrg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
   <br/>
-  <p>Wireshark and PowerShell timed out</p>
+  <p>Wireshark and PowerShell timed out after denying icmp (ping) traffic</p>
 <img src="https://i.imgur.com/8epnq3H.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
+</br>
+<p> In Wireshark, we can filter SSH only traffic. From the Windows 10 VM, we can SSH into Linux Virtual Machine (VM2) (using "ssh username@ip address" its private IP address). When we use commands such as touch, pwd (print working directory) or ls, into the linux SSH was used to connect. SSH traffic is observed spamming in WireShark. The SSH connection can be exited, by typing ‘exit’ and pressing [Enter].
+</p>
+<img src="https://i.imgur.com/PUntF1K.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
