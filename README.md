@@ -56,12 +56,18 @@ After retrieving the private IP address from VM2 (Linux Ubutu Server 20.04) we c
 
 <p>If we want to deny the ping request we can add this rule to our Network Security Group inside the Virtual Machine and once we've added this rule to VM2, we can see that the traffic times out in PowerShell along with Wireshark longer displaying a reply to this request. 
   </p>
-  <img src="https://i.imgur.com/mTtkBrg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/mTtkBrg.png" height="80%" width="80%" alt="ping traffic"/>
   <br/>
   <p>Wireshark and PowerShell timed out after denying icmp (ping) traffic</p>
-<img src="https://i.imgur.com/8epnq3H.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/8epnq3H.png" height="80%" width="80%" alt="icmp traffic deny"/>
 
 </br>
-<p> In Wireshark, we can filter SSH only traffic. From the Windows 10 VM, we can SSH into Linux Virtual Machine (VM2) (using "ssh username@ip address" its private IP address). When we use commands such as touch, pwd (print working directory) or ls, into the linux SSH was used to connect. SSH traffic is observed spamming in WireShark. The SSH connection can be exited, by typing ‘exit’ and pressing [Enter].
+<p> We can filter in Wireshark, we can filter SSH only traffic. From the Windows 10 VM, we can SSH into Linux Virtual Machine (VM2) (using "ssh username@ip address" its private IP address). When we use commands such as touch, pwd (print working directory) or ls, into the linux SSH was used to connect. SSH traffic is observed spamming in WireShark. The SSH connection can be exited, by typing ‘exit’ and pressing [Enter].
 </p>
-<img src="https://i.imgur.com/DpJdcZl.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/DpJdcZl.png" height="80%" width="80%" alt="ssh traffic"/>
+</br>
+<p> We can filter in Wireshark for "DHCP traffic only". From VM1 (Windows 10 21H2), a new IP address was issued from the command line (ipconfig /renew). Now DHCP traffic can be observed in WireShark.</p>
+<img src="https://i.imgur.com/GLm7cMT.png" height="80%" width="80%" alt="dhcp traffic"/>
+</br>
+<p> In Wireshark, we can filter for RDP traffic only (tcp.port == 3389) because the RDP (protocol) is constantly showing you a live stream from one computer to another, therefore traffic is consistently being transmitted </p>
+<img src="https://i.imgur.com/rB07Fw7.png" height="80%" width="80%" alt="tcp 3389"/>
