@@ -32,7 +32,7 @@ Observe RDP Traffic
 Virtual Machines (VM) allow you to more easily scale your applications by adding more physical or virtual servers to distribute the workload across multiple VMs. We created two Virtual Machines (pictured below) of differing Operating Systems (Windows 10 21H2 & Linux Ubuntu Server 20.04) that will be used for Remote Deskop and to observe network traffic between the two devices. 
 </p>
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/BifIhxG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
@@ -40,7 +40,7 @@ Virtual Machines (VM) allow you to more easily scale your applications by adding
 
 <p>Remote desktop allows the user to connect to a computer in another location, see that computer's desktop and interact with it as if it were local. A quick search for "remote desktop connection" will allow the user to access the VM. Here we will be entering the details of the public IP address for VM1 (Windows 10 21H2) to install Wireshark (packet analysis software) instead of using our local machine. (below pictured search of remote desktop and the result to enter IP address)</p>
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/PEeQyYV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
@@ -48,7 +48,7 @@ Virtual Machines (VM) allow you to more easily scale your applications by adding
 <p>
 After retrieving the private IP address from VM2 (Linux Ubutu Server 20.04) we can now ping that private IP address from VM1 (Windows 10 21H2) that we've used to remote into. We can use the ping command to test the connection between machines for connectivity. So we can now view the traffic travel from VM1 to VM2 by filtering the ICMP packets in Wireshark. We can also ping other IP address or a domain names (www.google.com). The filtered traffic that is requested and its corresponding reply is shown below in Wireshark is pictured (left) and Powershell (right):
 </p>
-<p>
+<p align="center">
 <img src="https://i.imgur.com/SriHAg2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
@@ -59,15 +59,21 @@ After retrieving the private IP address from VM2 (Linux Ubutu Server 20.04) we c
   <img src="https://i.imgur.com/mTtkBrg.png" height="80%" width="80%" alt="ping traffic"/>
   <br/>
   <p>Wireshark and PowerShell timed out after denying icmp (ping) traffic</p>
+  <p align="center">
 <img src="https://i.imgur.com/8epnq3H.png" height="80%" width="80%" alt="icmp traffic deny"/>
-
+</p>
 </br>
 <p> We can filter in Wireshark, we can filter SSH only traffic. From the Windows 10 VM, we can SSH into Linux Virtual Machine (VM2) (using "ssh username@ip address" its private IP address). When we use commands such as touch, pwd (print working directory) or ls, into the linux SSH was used to connect. SSH traffic is observed spamming in WireShark. The SSH connection can be exited, by typing ‘exit’ and pressing [Enter].
 </p>
+<p align="center">
 <img src="https://i.imgur.com/DpJdcZl.png" height="80%" width="80%" alt="ssh traffic"/>
 </br>
 <p> We can filter in Wireshark for "DHCP traffic only". From VM1 (Windows 10 21H2), a new IP address was issued from the command line (ipconfig /renew). Now DHCP traffic can be observed in WireShark.</p>
+<p align="center">
 <img src="https://i.imgur.com/GLm7cMT.png" height="80%" width="80%" alt="dhcp traffic"/>
+</p>
 </br>
 <p> In Wireshark, we can filter for RDP traffic only (tcp.port == 3389) because the RDP (protocol) is constantly showing you a live stream from one computer to another, therefore traffic is consistently being transmitted </p>
+<p align="center">
 <img src="https://i.imgur.com/rB07Fw7.png" height="80%" width="80%" alt="tcp 3389"/>
+</p>
