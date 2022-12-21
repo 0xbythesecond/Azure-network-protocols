@@ -46,7 +46,7 @@ Virtual Machines (VM) allow you to more easily scale your applications by adding
 
 <br />
 <p>
-After retrieving the private IP address from VM2 (Linux Ubutu Server 20.04) we can now ping the private address from VM (Windows 10 21H2) that we've used to remote into. So we can now view the traffic travel from VM1 to VM2 by filtering the ICMP packets in Wireshark. We've used the ping command, as a command line tool in powershell, to initiate the traffic. The filter traffic is shown below in Wireshark is pictured (left) and Powershell (right):
+After retrieving the private IP address from VM2 (Linux Ubutu Server 20.04) we can now ping the private address from VM (Windows 10 21H2) that we've used to remote into. So we can now view the traffic travel from VM1 to VM2 by filtering the ICMP packets in Wireshark. We can use the ping command to test the connection between machines for connectivity. The filter traffic is shown below in Wireshark is pictured (left) and Powershell (right):
 </p>
 <p>
 <img src="https://i.imgur.com/dVGKgAq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
