@@ -56,7 +56,9 @@ After retrieving the private IP address from VM2 (Linux Ubutu Server 20.04) we c
 
 <p>If we want to deny the ping request we can add this rule to our Network Security Group inside the Virtual Machine and once we've added this rule to VM2, we can see that the traffic times out in PowerShell along with Wireshark longer displaying a reply to this request. 
   </p>
+  <p align="center">
   <img src="https://i.imgur.com/mTtkBrg.png" height="80%" width="80%" alt="ping traffic"/>
+  </p>
   <br/>
   <p>Wireshark and PowerShell timed out after denying icmp (ping) traffic</p>
   <p align="center">
