@@ -46,10 +46,18 @@ Virtual Machines (VM) allow you to more easily scale your applications by adding
 
 <br />
 <p>
-After retrieving the private IP address from VM2 (Linux Ubutu Server 20.04) we can now ping that private IP address from VM1 (Windows 10 21H2) that we've used to remote into. We can use the ping command to test the connection between machines for connectivity. So we can now view the traffic travel from VM1 to VM2 by filtering the ICMP packets in Wireshark. The filter traffic is shown below in Wireshark is pictured (left) and Powershell (right):
+After retrieving the private IP address from VM2 (Linux Ubutu Server 20.04) we can now ping that private IP address from VM1 (Windows 10 21H2) that we've used to remote into. We can use the ping command to test the connection between machines for connectivity. So we can now view the traffic travel from VM1 to VM2 by filtering the ICMP packets in Wireshark. We can also ping other IP address or a domain names (www.google.com). The filtered traffic that is requested and its corresponding reply is shown below in Wireshark is pictured (left) and Powershell (right):
 </p>
 <p>
 <img src="https://i.imgur.com/SriHAg2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
 <br />
+
+<p>If we want to deny the ping request we can add this rule to our Network Security Group inside the Virtual Machine and once we've added this rule to VM2, we can see that the traffic times out in PowerShell along with Wireshark longer displaying a reply to this request. 
+  </p>
+  <img src="https://i.imgur.com/mTtkBrg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  <br/>
+  <p>Wireshark and PowerShell timed out</p>
+<img src="https://i.imgur.com/8epnq3H.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
