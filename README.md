@@ -31,7 +31,7 @@ Observe RDP Traffic
 <p>
 Resource Groups (similar to a file system) logical collections of virtual machines, storage accounts, virtual networks, web apps, databases, and/or database servers.  
   
-Virtual Machines allow you to more easily scale your applications by adding more physical or virtual servers to distribute the workload across multiple VMs. We created two Virtual Machines (pictured below) of differing Operating Systems (Windows 10 21H2 & Ubuntu Server 20.04) that will be used for Remote Deskop and to observe network traffic between the two devices. 
+Virtual Machines (VM) allow you to more easily scale your applications by adding more physical or virtual servers to distribute the workload across multiple VMs. We created two Virtual Machines (pictured below) of differing Operating Systems (Windows 10 21H2 & Ubuntu Server 20.04) that will be used for Remote Deskop and to observe network traffic between the two devices. 
 </p>
 
 <p>
@@ -40,7 +40,7 @@ Virtual Machines allow you to more easily scale your applications by adding more
 
 <br />
 
-<p>  Remote desktop allows the user to connect to a computer in another location, see that computer's desktop and interact with it as if it were local. A quick search for "remote desktop connection" will allow the user to access the VM. Here we will be entering the details of the public IP address for VM1 (Windows 10 21H2) to install wireshark instead of our local machine. (below pictured search of remote desktop and the result to enter IP address)</p>
+<p>  Remote desktop allows the user to connect to a computer in another location, see that computer's desktop and interact with it as if it were local. A quick search for "remote desktop connection" will allow the user to access the VM. Here we will be entering the details of the public IP address for VM1 (Windows 10 21H2) to install Wireshark (packet analysis software) instead of using our local machine. (below pictured search of remote desktop and the result to enter IP address)</p>
 
 <p>
 <img src="https://i.imgur.com/PEeQyYV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
