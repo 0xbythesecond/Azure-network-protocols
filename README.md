@@ -29,7 +29,7 @@ Observe RDP Traffic
 <h2>Actions and Observations</h2>
 
 <p>Resource Groups (similar to a file system) logical collections of virtual machines, storage accounts, virtual networks, web apps, databases, and/or database servers.  
-Virtual Machines (VM) allow you to more easily scale your applications by adding more physical or virtual servers to distribute the workload across multiple VMs. We created two Virtual Machines (pictured below) of differing Operating Systems (Windows 10 21H2 & Ubuntu Server 20.04) that will be used for Remote Deskop and to observe network traffic between the two devices. 
+Virtual Machines (VM) allow you to more easily scale your applications by adding more physical or virtual servers to distribute the workload across multiple VMs. We created two Virtual Machines (pictured below) of differing Operating Systems (Windows 10 21H2 & Linux Ubuntu Server 20.04) that will be used for Remote Deskop and to observe network traffic between the two devices. 
 </p>
 
 <p>
@@ -46,10 +46,10 @@ Virtual Machines (VM) allow you to more easily scale your applications by adding
 
 <br />
 <p>
-After retrieving the private IP address from VM2 (Linux Ubutu Server 20.04) we can now ping the private address from VM (Windows 10 21H2) that we've used to remote into. So we can now view the traffic travel from VM1 to VM2 by filtering the ICMP packets in Wireshark. We can use the ping command to test the connection between machines for connectivity. The filter traffic is shown below in Wireshark is pictured (left) and Powershell (right):
+After retrieving the private IP address from VM2 (Linux Ubutu Server 20.04) we can now ping that private IP address from VM1 (Windows 10 21H2) that we've used to remote into. We can use the ping command to test the connection between machines for connectivity. So we can now view the traffic travel from VM1 to VM2 by filtering the ICMP packets in Wireshark. The filter traffic is shown below in Wireshark is pictured (left) and Powershell (right):
 </p>
 <p>
-<img src="https://i.imgur.com/dVGKgAq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/SriHAg2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
 <br />
