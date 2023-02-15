@@ -44,6 +44,12 @@ Virtual Machines (VM) allow you to more easily scale your applications by adding
 <img src="https://i.imgur.com/PEeQyYV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
+On the virtual machine with Windows 10, download Wireshark (Windows Installer 64-bit) and continue with all the default options.
+
+Npcap will pop up to install, go ahead and install that with defaults and wireshark will continue to install after.
+
+Open Wirehsark in the VM, click Ethernet and then click the blue fin at the top left under 'File' to begin capturing packets. Notice all the traffic already happening that happens in the background.
+
 <br />
 <p>
 After retrieving the private IP address from VM2 (Linux Ubutu Server 20.04) we can now ping that private IP address from VM1 (Windows 10 21H2) that we've used to remote into. We can use the ping command to test the connection between machines for connectivity. So we can now view the traffic travel from VM1 to VM2 by filtering the ICMP packets in Wireshark. We can also ping other IP address or a domain names (www.google.com). The filtered traffic that is requested and its corresponding reply is shown below in Wireshark is pictured (left) and Powershell (right):
@@ -65,7 +71,7 @@ After retrieving the private IP address from VM2 (Linux Ubutu Server 20.04) we c
 <img src="https://i.imgur.com/8epnq3H.png" height="80%" width="80%" alt="icmp traffic deny"/>
 </p>
 </br>
-<p> We can filter in Wireshark, we can filter SSH only traffic. From the Windows 10 VM, we can SSH into Linux Virtual Machine (VM2) (using "ssh username@ip address" its private IP address). When we use commands such as touch, pwd (print working directory) or ls, into the linux SSH was used to connect. SSH traffic is observed spamming in WireShark. The SSH connection can be exited, by typing ‘exit’ and pressing [Enter].
+<p> We can filter in Wireshark, with a the filter functionality we can filter SSH only traffic. From the Windows 10 VM, we enter SSH into Linux Virtual Machine (VM2) (using "ssh username@ip address" its private IP address). When we use commands such as touch, pwd (print working directory) or ls (list), into the linux SSH was used to connect. SSH traffic is observed spamming in WireShark. The SSH connection can be exited, by typing ‘exit’ and pressing [Enter].
 </p>
 <p align="center">
 <img src="https://i.imgur.com/DpJdcZl.png" height="80%" width="80%" alt="ssh traffic"/>
