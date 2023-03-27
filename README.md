@@ -49,13 +49,34 @@ After `Research Group` is entered and the results are returned, you can now sele
 <img src="https://i.imgur.com/Tqk3vLR.png" height="80%" width="80%" alt="search and create resource group" />
 </p> 
 
-You will select the `subscription name`, enter your custom created `resource group` name and select the preferred `region` that is the nearest to you that would assist saving on cost. As you are creating the resource group, you will see the opton to create a tag as well; however, in this lab, the tag is not needed.
+You will select the `subscription name`, enter your custom created `resource group` (here enter RG-LAB-2) name and select the preferred `region` that is the nearest to you that would assist saving on cost. As you are creating the resource group, you will see the option to create  tags as well; however, in this lab, the tag is not needed.
 
 <p align="center">
 <img src="https://i.imgur.com/Kwqp98O.png" height="60%" width="60%" alt="create resource group name" />
   </p>
 
 The two virtual machines that we create will allow us to send traffic between the two machines. You can name the Virtual Machine whatever you prefer to name them and can be easy to remember. 
+
+The first virtual machine that we will create will be Windows Operating System and will be named VM1, so we can do a quick search at the top of Azure for `Virtual Machine` then select Virtual machines from the search results. 
+
+Once that is done, we can then choose to `+ Create` from the top left or at the center of the page. You will then select the `create a virtual machine hosted by azure` option. 
+
+<p align="center">
+ <img src="https://i.imgur.com/zzBqzpk.png" height="80%" width="80%" alt="create virtual machine" />
+ </p> 
+
+Below you will select the `subscription`, the same `resource group` (RG-LAB-2), name the `virtual machnine` (VM1), select the same `Region` as the resource group as selected previously and the others that are pictured below. 
+<p align="center">
+  <img src="https://i.imgur.com/oddn03a.png" height="70%" width="70%" alt="create virtual machine name" />
+  </p>
+
+The remaining portion of the basics section for the virtual machine consist of the virtual machine size, the username, password, inbound port rules and licensing. We allow port 3389 so that we can later remote desktop into the virtual machine. 
+
+   >**Note**: Be sure to select the check box for licensing otherwise you will be prompting with an error message when the virtual machine is validation at time of creation.
+
+<p align="center">
+ <img src="https://i.imgur.com/U0QyvqS.png" height="70%" width="70%" alt="create size of windows vm"/>
+  </p>
 
 We created two Virtual Machines (pictured below) of differing Operating Systems (Windows 10 21H2 & Linux Ubuntu Server 20.04) that will be used for Remote Deskop and to observe network traffic between the two devices. 
 
@@ -66,7 +87,7 @@ We created two Virtual Machines (pictured below) of differing Operating Systems 
 
 <br />
 
- A quick search for "remote desktop connection" will allow the user to access the VM. Here we will be entering the details of the public IP address for VM1 (Windows 10 21H2) to install Wireshark (packet analysis software) instead of using our local machine. (below pictured search of remote desktop and the result to enter IP address)
+A quick search for "remote desktop connection" will allow the user to access the VM. Here we will be entering the details of the public IP address for VM1 (Windows 10 21H2) to install Wireshark (packet analysis software) instead of using our local machine. (below pictured search of remote desktop and the result to enter IP address)
 
 <p align="center">
 <img src="https://i.imgur.com/PEeQyYV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
