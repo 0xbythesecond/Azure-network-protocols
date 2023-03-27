@@ -21,7 +21,6 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 ## High-Level Steps
 
 - Create Resources
-  - Create Virtual Machines
 - Observe ICMP Traffic
 - Observe SSH Traffic
 - Observe DHCP Traffic
@@ -34,8 +33,29 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 |-------|------------|
 |Resource Groups| Resource Groups (similar to a file system) logical collections of virtual machines, storage accounts, virtual networks, web apps, databases, and/or database servers.  
 |Virtual Machines (VM)| Virtual Machines (VM) allow you to more easily scale your applications by adding more physical or virtual servers to distribute the workload across multiple VMs.
-|Remote Desktop| Remote desktop allows the user to connect to a computer in another location, see that computer's desktop and interact with it as if it were local.|
+|Remote Desktop| Remote desktop allows the user to connect to a computer in another location, see that computer's desktop and interact with it as if it were local.
+|Tags| Tags are metadata elements that you apply to your Azure resources. They're key-value pairs that help you identify resources based on settings that are relevant to your organization
+|Region| Each Azure region features datacenters deployed within a latency-defined perimeter. They're connected through a dedicated regional low-latency network. This design ensures that Azure services within any region offer the best possible performance and security.
 
+### Step 1
+The first step will be creating a Resource group that will house our two Virtual Machines to observe the traffic being sent between the two machines. To Create the Resource Group you can do a quick search for `Research Group ` at the top of Azure or you can select `Create a Resource` and then choose to create the Resource group from the Azure Market Place. 
+
+<p align="center">
+  <img src="https://i.imgur.com/GKUzeBu.png" height="70%" width="70%" alt="search resource group" /> 
+  </p>
+  
+After `Research Group` is entered and the results are returned, you can now select the `+ Create` button. This will begin the process of creating the resource group that will have eaach of our resources such as the virtual machines.  
+<p align="center">
+<img src="https://i.imgur.com/Tqk3vLR.png" height="80%" width="80%" alt="search and create resource group" />
+</p> 
+
+You will select the `subscription name`, enter your custom created `resource group` name and select the preferred `region` that is the nearest to you that would assist saving on cost. As you are creating the resource group, you will see the opton to create a tag as well; however, in this lab, the tag is not needed.
+
+<p align="center">
+<img src="https://i.imgur.com/Kwqp98O.png" height="60%" width="60%" alt="create resource group name" />
+  </p>
+
+The two virtual machines that we create will allow us to send traffic between the two machines. You can name the Virtual Machine whatever you prefer to name them and can be easy to remember. 
 
 We created two Virtual Machines (pictured below) of differing Operating Systems (Windows 10 21H2 & Linux Ubuntu Server 20.04) that will be used for Remote Deskop and to observe network traffic between the two devices. 
 
@@ -93,4 +113,4 @@ We can filter in Wireshark, with a the filter functionality we can filter SSH on
 <p align="center">
 <img src="https://i.imgur.com/rB07Fw7.png" height="80%" width="80%" alt="tcp 3389"/>
 </p>
-<p align="center"><i><b>🌤️"Learn something new, or a new way of approaching something old because there are a few skills are valuable as the art of learning.”🌤️</p></i></b>
+<p align="center"><i><b>🌤️"Learn something new, or a new way of approaching something old because there are a few skills that are as valuable as the art of learning.”🌤️</p></i></b>
