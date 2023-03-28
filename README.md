@@ -27,14 +27,6 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 ## Actions and Observations
 
 
-|Terms | Descriptions|
-|-------|------------|
-|Resource Groups| Resource Groups (similar to a file system) logical collections of virtual machines, storage accounts, virtual networks, web apps, databases, and/or database servers.  
-|Virtual Machines (VM)| Virtual Machines (VM) allow you to more easily scale your applications by adding more physical or virtual servers to distribute the workload across multiple VMs.
-|Remote Desktop| Remote desktop allows the user to connect to a computer in another location, see that computer's desktop and interact with it as if it were local.
-|Tags| Tags are metadata elements that you apply to your Azure resources. They're key-value pairs that help you identify resources based on settings that are relevant to your organization
-|Region| Each Azure region features datacenters deployed within a latency-defined perimeter. They're connected through a dedicated regional low-latency network. This design ensures that Azure services within any region offer the best possible performance and security.
-
 ### Step 1 Install Resources
 The first step will be creating a Resource group that will house our two Virtual Machines to observe the traffic being sent between the two machines. To Create the Resource Group you can do a quick search for `Research Group ` at the top of Azure or you can select `Create a Resource` and then choose to create the Resource group from the Azure Market Place. 
 
@@ -194,10 +186,32 @@ Then type `yes` and it will ask for the password. Take note that as you are typi
 <img src="https://i.imgur.com/GLm7cMT.png" height="80%" width="80%" alt="dhcp traffic"/>
 </p>
 
+DNS (Phonebook of the Internet) Traffic UDP Port 53
+
+In Wireshark, filter to DNS traffic and click refresh to clear any traffic.
+
+In Powershell, type in nslookup www.disney.com (this is basically asking what Disney's ip addresses are)
+
+<p align="center">
+  <img src="https://i.imgur.com/rQXcAol.png" height="80%" width="80%" alt="dns traffic"/>
+  </p>
+
+Using nslookup to see what is Disney's ip address
+
 </br>
 In Wireshark, we can filter for RDP traffic only (tcp.port == 3389) because the RDP (protocol) is constantly showing you a live stream from one computer to another, therefore traffic is consistently being transmitted.
 
 <p align="center">
-<img src="https://i.imgur.com/rB07Fw7.png" height="70%" width="70%" alt="tcp 3389"/>
+<img src="https://i.imgur.com/eDKBXV1.png" height="70%" width="70%" alt="tcp 3389"/>
 </p>
+
+|Terms | Descriptions|
+|-------|------------|
+|Resource Groups| Resource Groups (similar to a file system) logical collections of virtual machines, storage accounts, virtual networks, web apps, databases, and/or database servers.  
+|Virtual Machines (VM)| Virtual Machines (VM) allow you to more easily scale your applications by adding more physical or virtual servers to distribute the workload across multiple VMs.
+|Remote Desktop| Remote desktop allows the user to connect to a computer in another location, see that computer's desktop and interact with it as if it were local.
+|Tags| Tags are metadata elements that you apply to your Azure resources. They're key-value pairs that help you identify resources based on settings that are relevant to your organization
+|Region| Each Azure region features datacenters deployed within a latency-defined perimeter. They're connected through a dedicated regional low-latency network. This design ensures that Azure services within any region offer the best possible performance and security.
+|DNS| DNS or the Domain Name System, translates human readable domain names (for example, www.amazon.com) to machine readable IP addresses (for example, 192.0.2.44).
+
 <p align="center"><i><b>🌤️"Learn something new, or a new way of approaching something old because there are a few skills that are as valuable as the art of learning.”🌤️</p></i></b>
