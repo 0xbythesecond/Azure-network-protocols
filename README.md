@@ -207,11 +207,13 @@ In Wireshark, we can filter for RDP traffic only (tcp.port == 3389) because the 
 
 |Terms | Descriptions|
 |-------|------------|
+|Subscription| Subscription is a logical container used to provision related business or technical resources in Azure. It holds the details of all your resources like virtual machines (VMs), databases, and more. 
 |Resource Groups| Resource Groups (similar to a file system) logical collections of virtual machines, storage accounts, virtual networks, web apps, databases, and/or database servers.  
 |Virtual Machines (VM)| Virtual Machines (VM) allow you to more easily scale your applications by adding more physical or virtual servers to distribute the workload across multiple VMs.
 |Remote Desktop| Remote desktop allows the user to connect to a computer in another location, see that computer's desktop and interact with it as if it were local.
 |Tags| Tags are metadata elements that you apply to your Azure resources. They're key-value pairs that help you identify resources based on settings that are relevant to your organization
 |Region| Each Azure region features datacenters deployed within a latency-defined perimeter. They're connected through a dedicated regional low-latency network. This design ensures that Azure services within any region offer the best possible performance and security.
+|DHCP| DHCP (Dynamic Host Configuration Protocol) is a network management protocol used on Internet Protocol networks for automatically assigning IP addresses and other communication parameters to devices connected to the network using a client–server architecture.
 |DNS| DNS or the Domain Name System, translates human readable domain names (for example, www.amazon.com) to machine readable IP addresses (for example, 192.0.2.44).
 
 <p align="center"><i><b>🌤️"Learn something new, or a new way of approaching something old because there are a few skills that are as valuable as the art of learning.”🌤️</p></i></b>
