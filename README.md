@@ -205,6 +205,12 @@ In Wireshark, we can filter for RDP traffic only (tcp.port == 3389) because the 
 <img src="https://i.imgur.com/eDKBXV1.png" height="70%" width="70%" alt="tcp 3389"/>
 </p>
 
+Now that we are done with this lab, we can delete the resource group by doing a search for `Resource Group` and then select the Resource Group that we created that contains the two Virtual Machines (Windows 10 Pro & Linux Ubuntu Server).
+
+<p align="center">
+  <img src="https://i.imgur.com/MgNl9rw.png" height="70%" width="70%" alt="delete resource group"/> 
+  </p>
+
 |Terms | Descriptions|
 |-------|------------|
 |Subscription| Subscription is a logical container used to provision related business or technical resources in Azure. It holds the details of all your resources like virtual machines (VMs), databases, and more. 
