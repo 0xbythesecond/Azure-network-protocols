@@ -207,6 +207,8 @@ In Wireshark, we can filter for RDP traffic only (tcp.port == 3389) because the 
 
 Now that we are done with this lab, we can delete the resource group by doing a search for `Resource Group` and then select the Resource Group that we created that contains the two Virtual Machines (Windows 10 Pro & Linux Ubuntu Server).
 
+Once the Resource Group is selected, you will enter the Resource Group name and then choose to `Delete` at the top of the page and then the final delete button at the bottom of the page.
+
 <p align="center">
   <img src="https://i.imgur.com/MgNl9rw.png" height="70%" width="70%" alt="delete resource group"/> 
   </p>
