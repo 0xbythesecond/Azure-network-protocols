@@ -26,8 +26,15 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 ## Actions and Observations
 
-
+<details>
+ 
+  
+<summary> 
+  
 ### Step 1 Install Resources
+  
+</summary>  
+  
 The first step will be creating a Resource group that will house our two Virtual Machines to observe the traffic being sent between the two machines. To Create the Resource Group you can do a quick search for `Research Group ` at the top of Azure or you can select `Create a Resource` and then choose to create the Resource group from the Azure Market Place. 
 
 <p align="center">
@@ -99,8 +106,18 @@ We created two Virtual Machines (pictured below) of differing Operating Systems 
 
 <br />
 
+</details>  
+  
+#
+
+<details>
+  
+<summary>  
+  
 ### Step 2 Install Wireshark
 
+</summary>  
+  
 A quick search for `"remote desktop connection"` will allow the us to access the VM. Here we will be entering the details of the public IP address for VM1 (Windows 10 21H2) to install Wireshark (packet analysis software) instead of using our local machine. (below pictured search of remote desktop and the result to enter IP address)
 
 <p align="center">
@@ -132,8 +149,19 @@ Open Wirehsark in the VM, click Ethernet and then click the blue fin at the top 
   </p>
 
 <br />
+  
+</details>
+
+#
+
+<details>
+  
+<summary>
 
 ### Step 3 Observe Differing Network Protocols
+  
+</summary>  
+  
 After retrieving the private IP address from VM2 (Linux Ubutu Server 20.04) we can now ping that private IP address from VM1 (Windows 10 21H2) that we've used to remote into. We can use the ping command to test the connection between machines for connectivity. 
 
 So we can now view the traffic travel from VM1 to VM2 by filtering the ICMP packets in Wireshark. We can also ping other IP address or a domain names (www.google.com). The filtered traffic (ICMP) in Wireshark that is requested and its corresponding reply is shown below in Wireshark is pictured (left) and Powershell (right):
@@ -225,3 +253,5 @@ Once the Resource Group is selected, you will enter the Resource Group name and 
 |DNS| DNS or the Domain Name System, translates human readable domain names (for example, www.amazon.com) to machine readable IP addresses (for example, 192.0.2.44).
 
 <p align="center"><i><b>🌤️"Learn something new, or a new way of approaching something old because there are a few skills that are as valuable as the art of learning.”🌤️</p></i></b>
+
+</details>
